@@ -235,6 +235,8 @@ const ReportForm = () => {
               <FormControl fullWidth>
                 <TextField
                   label="Missing Date"
+                  type="date"
+                  InputLabelProps={{ shrink: true }}
                   {...formik.getFieldProps("missingDate")}
                 />
 

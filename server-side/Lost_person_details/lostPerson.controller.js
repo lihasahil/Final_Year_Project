@@ -2,10 +2,6 @@ import express from "express";
 import LostPerson from "./lostPerson.model.js";
 import isValidUser from "../middleware/authentication.middleware.js";
 import router from "../User/user.controller.js";
-import multer from "multer";
-import multer from "multer";
-import fs from "fs";
-import path from "path";
 // const storage = multer.diskStorage({
 //   destination: function (req, file, cb) {
 //     if (!fs.existsSync("public")) {
