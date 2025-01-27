@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 // set schema/structure/rule
 const lostPersonSchema = new mongoose.Schema({
-  image: {
+  video: {
     type: String,
     required: true,
   },

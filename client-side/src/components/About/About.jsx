@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import HoverTextCard from "../HoverTextCard/HoverTextCard";
 import "./About.css";
 const About = () => {
   return (
@@ -31,57 +32,108 @@ const About = () => {
       </div>
       <div className="box">
         <h2>Out Technology</h2>
-        <p>
+        <div className="cards">
+          <HoverTextCard
+            visibleImage="face.png"
+            hiddenText="
           Face Recognition: Our state-of-the-art face recognition system can
           analyze and compare facial features from various sources, including
           photos, videos, and live feeds. This technology helps identify
           individuals in diverse environments, increasing the chances of a
           successful recovery.
-        </p>
-        <p>
-          Gait Pattern Analysis: In addition to facial recognition, we utilize
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+          <HoverTextCard
+            visibleImage="Gait.png"
+            hiddenText="
+           Gait Pattern Analysis: In addition to facial recognition, we utilize
           gait pattern analysis to enhance our search capabilities. By studying
           an individuals unique walking pattern, our system can identify and
           track them, even in challenging conditions where facial features might
           not be clearly visible.
-        </p>
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+        </div>
       </div>
       <div className="box">
         <h2>How we work?</h2>
-        <p>
-          Data Collection: We gather data from multiple sources, including CCTV
+        <div className="cards">
+          <HoverTextCard
+            visibleImage="data_collection.webp"
+            hiddenText="
+           Data Collection: We gather data from multiple sources, including CCTV
           footage, social media, and public databases, to create a comprehensive
           profile of the missing person.
-        </p>
-        <p>
-          Analysis: Our advanced algorithms process the collected data,
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+          <HoverTextCard
+            visibleImage="analysis.webp"
+            hiddenText="
+           Analysis: Our advanced algorithms process the collected data,
           comparing it against a vast database to identify potential matches.
-        </p>
-        <p>
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+          <HoverTextCard
+            visibleImage="COLLABORATE.webp"
+            hiddenText="
           Collaboration: We work closely with law enforcement agencies,
           community organizations, and families to ensure a coordinated and
           effective search effort.
-        </p>
-        <p>
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+          <HoverTextCard
+            visibleImage="Support.jpg"
+            hiddenText="
           Support: We provide continuous support and updates to families,
           keeping them informed throughout the search process.
-        </p>
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+        </div>
       </div>
       <div className="box">
         <h2>Why Choose Us</h2>
-        <p>
+        <div className="cards">
+          <HoverTextCard
+            visibleImage="accuracy.png"
+            hiddenText="
           Accuracy: Our cutting-edge technology ensures high accuracy in
           identifying and locating missing persons.
-        </p>
-        <p>
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+          <HoverTextCard
+            visibleImage="speed.jpg"
+            hiddenText="
           Speed: Time is of the essence in missing person cases. Our system is
           designed to deliver rapid results, increasing the chances of a
           successful outcome.
-        </p>
-        <p>
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+          <HoverTextCard
+            visibleImage="compassion.png"
+            hiddenText="
           Compassion: We approach each case with empathy and dedication,
           understanding the emotional impact on families and loved ones
-        </p>
+        "
+            cardWidth="24rem"
+            cardHeight="16rem"
+          />
+        </div>
       </div>
     </div>
   );

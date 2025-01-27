@@ -1,44 +1,38 @@
-import React, { useContext, useState } from "react";
-import "./Navbar.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const Navbar = () => {
-  const [menu, setMenu] = useState("about");
+import "./Navbar.css";
+
+const Navbar = ({ menuItems, defaultActive }) => {
+  const [menu, setMenu] = useState(defaultActive || menuItems[0]?.id);
+
+  const handleItemClick = (item) => {
+    // Call the onClick handler if it exists
+    if (item.onClick) {
+      item.onClick();
+    }
+    setMenu(item.id); // Update the active menu
+  };
 
   return (
-    <div className="navbar">
-      <Link to="/">FindMe</Link>
-
+    <nav className="navbar">
+      {/* Logo is the same for all instances */}
+      <Link to="/" className="navbar-logo">
+        FindMe
+      </Link>
       <ul className="navbar-menu">
-        <Link
-          to="/"
-          onClick={() => setMenu("home")}
-          className={menu === "home" ? "active" : ""}
-        >
-          Home
-        </Link>
-        <a
-          href="#about"
-          onClick={() => setMenu("about")}
-          className={menu === "about" ? "active" : ""}
-        >
-          About
-        </a>
-        <a
-          href="#app-download"
-          onClick={() => setMenu("mobile-app")}
-          className={menu === "mobile-app" ? "active" : ""}
-        >
-          Mobile-App
-        </a>
-        <a
-          href="#footer"
-          onClick={() => setMenu("contact-us")}
-          className={menu === "contact-us" ? "active" : ""}
-        >
-          Contact Us
-        </a>
+        {menuItems.map((item) => (
+          <li key={item.id} className="navbar-item">
+            <Link
+              to={item.path}
+              onClick={() => handleItemClick(item)}
+              className={menu === item.id ? "active" : ""}
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
-    </div>
+    </nav>
   );
 };
 

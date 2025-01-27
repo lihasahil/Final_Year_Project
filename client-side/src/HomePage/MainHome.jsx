@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./MainHome.css";
+import NavBar from "../components/Navbar/NavBar";
 
 const MainHome = () => {
   const navigate = useNavigate();
@@ -11,29 +12,24 @@ const MainHome = () => {
   };
   return (
     <>
+      <NavBar
+        menuItems={[
+          { id: "report", label: "Report Lost Person", path: "/report" },
+          { id: "find", label: "Find Missing Person", path: "#find" },
+          {
+            label: "Log Out",
+            id: "logout",
+            onClick: () => {
+              handleLogout();
+            },
+          },
+        ]}
+        defaultActive="home"
+      />
       <div className="main-body">
-        <button
-          onClick={() => {
-            navigate("/report");
-          }}
-        >
-          Report Lost Person
-        </button>
-        <button>Report Found Person</button>
-      </div>
-      <div>
         <Typography variant="h6">
           Welcome , {localStorage.getItem("firstName")}
         </Typography>
-        <Button
-          variant="text"
-          sx={{ color: "#000" }}
-          onClick={() => {
-            handleLogout();
-          }}
-        >
-          logout
-        </Button>
       </div>
     </>
   );

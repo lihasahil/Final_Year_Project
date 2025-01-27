@@ -31,3 +31,10 @@
   margin-bottom: 2%;
   font-size: 16px;
 }
+.cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 100px;
+  row-gap: 20px;
+  padding-left: 10%; /* Adjust the gap between grid items */
+}

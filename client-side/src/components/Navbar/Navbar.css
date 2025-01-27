@@ -1,10 +1,14 @@
 .navbar {
   padding: 20px 0px;
+  position: fixed;
+  z-index: 9999;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(to right, #00093c, #2d0b00);
   color: #fff;
+  top: 0;
 }
 
 .navbar .logo {

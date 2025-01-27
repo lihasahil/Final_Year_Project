@@ -6,12 +6,19 @@ import "./Home.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import AppDownload from "../components/AppDownload/AppDownload";
-
 const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <NavBar />
+      <NavBar
+        menuItems={[
+          { id: "home", label: "Home", path: "/" },
+          { id: "about", label: "About", path: "#about" },
+          { id: "about", label: "Mobile App", path: "#about" },
+          { id: "contact", label: "Contact", path: "#contact" },
+        ]}
+        defaultActive="home"
+      />
       <Header />
       <About />
       <AppDownload />
