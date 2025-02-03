@@ -17,7 +17,7 @@ app.use(userRoutes);
 app.use(lostPersonRoutes);
 
 // network port and server
-const PORT = 9050;
+const PORT = process.env.PORT || 9050;
 
 app.listen(PORT, () => {
   console.log(`App is listening in port ${PORT}`);
