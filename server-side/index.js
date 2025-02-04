@@ -8,6 +8,9 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 
+// network port and server
+const PORT = process.env.PORT || 9051;
+
 app.use(express.json());
 app.use(cors({ origin: "https://final-year-project-w7uu.onrender.com" }));
 // database connection
@@ -15,9 +18,6 @@ connectDB();
 // register routes
 app.use(userRoutes);
 app.use(lostPersonRoutes);
-
-// network port and server
-const PORT = process.env.PORT || 9051;
 
 app.listen(PORT, () => {
   console.log(`App is listening in port ${PORT}`);
