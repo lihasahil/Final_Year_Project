@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: ["findmefrontend.vercel.app"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
 );
