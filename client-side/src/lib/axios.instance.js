@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://final-year-project-leq6.onrender.com";
+  baseURL: "http://localhost:9051";
 });
 
 
