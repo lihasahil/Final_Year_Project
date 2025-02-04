@@ -92,7 +92,7 @@ const About = () => {
             cardHeight="16rem"
           />
           <HoverTextCard
-            visibleImage="Support.jpg"
+            visibleImage="Support.png"
             hiddenText="
           Support: We provide continuous support and updates to families,
           keeping them informed throughout the search process.

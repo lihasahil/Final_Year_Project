@@ -1,5 +1,6 @@
+/* Navbar Container */
 .navbar {
-  padding: 20px 0px;
+  padding: 20px;
   position: fixed;
   z-index: 9999;
   display: flex;
@@ -11,99 +12,83 @@
   top: 0;
 }
 
-.navbar .logo {
-  width: 150px;
+/* Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
 
+/* Navbar Menu */
 .navbar-menu {
   display: flex;
   list-style: none;
   gap: 20px;
+}
+
+.navbar-item {
+  cursor: pointer;
+}
+
+.navbar-item a {
   color: white;
-  font-size: 18px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  transition: 0.3s ease-in-out;
 }
 
-.navbar-right {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.navbar-item a:hover,
+.navbar-item .active {
+  border-bottom: 2px solid #fff;
 }
 
-.navbar button {
-  background: transparent;
-  font-size: 16px;
-  color: #49557e;
-  border: 1px solid tomato;
-  padding: 10px 30px;
-  border-radius: 50px;
+/* Hamburger Menu */
+.menu-icon {
+  display: none; /* Hidden by default */
+  font-size: 2rem;
   cursor: pointer;
+  color: white;
 }
 
-.navbar button:hover {
-  background-color: #fff4f2;
-}
-
-.navbar .active {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #49557e;
-}
-
-.navbar li {
-  cursor: pointer;
-}
-
-.navbar-search-icon {
-  position: relative;
-}
-
-.navbar-search-icon .dot {
-  position: absolute;
-  min-width: 10px;
-  min-height: 10px;
-  border-color: tomato;
-  border-radius: 5px;
-  top: -8px;
-  right: -8px;
-}
-
-@media (max-width: 1050px) {
-  .navbar .logo {
-    width: 140px;
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show menu icon */
   }
+
+  /* Hide menu by default */
   .navbar-menu {
-    gap: 20px;
-    font-size: 17px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #00093c;
+    text-align: center;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
   }
-  .navbar-right {
-    gap: 30px;
+
+  /* Show menu when open */
+  .navbar-menu.open {
+    display: flex;
   }
-  .navbar-right img {
-    width: 22px;
-  }
-  .navbar-right button {
-    padding: 8px 25px;
+
+  .navbar-item {
+    padding: 10px 0;
   }
 }
 
-@media (max-width: 900px) {
-  .navbar .logo {
-    width: 120px;
+/* Tablet Adjustments */
+@media (max-width: 1050px) {
+  .navbar-logo {
+    font-size: 1.4rem;
   }
+
   .navbar-menu {
     gap: 15px;
-    font-size: 16px;
   }
-  .navbar-right {
-    gap: 20px;
-  }
-  .navbar-right img {
-    width: 20px;
-  }
-  .navbar-right button {
-    padding: 7px 20px;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 750px) {
 }

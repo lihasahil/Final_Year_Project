@@ -1,12 +1,8 @@
-.login_container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* Default Styling */
 
 .login_form_container {
+  margin: 0 auto;
+  margin-top: 7%;
   width: 900px;
   height: 500px;
   display: flex;
@@ -95,4 +91,120 @@
   background: linear-gradient(to right, #00093c, #2d0b00);
   color: white;
   margin: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .login_form_container {
+    width: 80%;
+    height: 450px;
+    margin-top: 40%;
+  }
+
+  .left,
+  .right {
+    padding: 10px;
+  }
+
+  .form_container h1 {
+    font-size: 36px;
+  }
+
+  .input {
+    width: 300px;
+    padding: 12px;
+  }
+
+  .white_btn,
+  .green_btn {
+    width: 150px;
+  }
+
+  .right h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .login_form_container {
+    flex-direction: column;
+    height: auto;
+    margin-top: 40%;
+  }
+
+  .left,
+  .right {
+    flex: none;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+  }
+
+  .right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    padding: 20px;
+  }
+
+  .form_container h1 {
+    font-size: 30px;
+  }
+
+  .input {
+    width: 80%;
+    padding: 12px;
+  }
+
+  .white_btn,
+  .green_btn {
+    width: 140px;
+  }
+
+  .right h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login_form_container {
+    width: 100%;
+    height: auto;
+    margin-top: 40%;
+  }
+
+  .left,
+  .right {
+    flex: none;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .form_container h1 {
+    font-size: 28px;
+  }
+
+  .input {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .white_btn,
+  .green_btn {
+    width: 120px;
+    font-size: 12px;
+  }
+
+  .right h1 {
+    font-size: 28px;
+  }
 }
