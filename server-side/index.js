@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 9051;
 
 app.use(express.json());
-app.use(cors({ origin: "https://final-year-project-w7uu.onrender.com" }));
+app.use(cors({ origin: "http://localhost:5173" }));
 // database connection
 connectDB();
 // register routes
