@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "https://final-year-project-1-e3pr.onrender.com" }));
+app.use(cors({ origin: "http://localhost:5174" }));
 // database connection
 connectDB();
 // register routes
@@ -17,7 +17,7 @@ app.use(userRoutes);
 app.use(lostPersonRoutes);
 
 // network port and server
-const PORT = process.env.PORT || 9050;
+const PORT = process.env.PORT || 9051;
 
 app.listen(PORT, () => {
   console.log(`App is listening in port ${PORT}`);
