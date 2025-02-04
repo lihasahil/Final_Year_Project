@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 // network port and server
-const PORT = process.env.PORT || 9051;
+const PORT = 9051;
 
 app.use(express.json());
 app.use(
