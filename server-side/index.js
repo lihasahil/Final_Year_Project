@@ -14,7 +14,7 @@ const PORT = 9051;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["findmefrontend.vercel.app"],
+    origin: ["https://findmefrontend.vercel.app"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
