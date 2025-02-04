@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "findmebackend-iota.vercel.app",
+  baseURL: "findmebackend1.vercel.app",
 });
 
 axiosInstance.interceptors.request.use(function (config) {
