@@ -71,15 +71,39 @@
   border-radius: 50px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
+  .header {
+    width: 95%;
+    margin-top: 8%;
+  }
+
   .header-contents {
-    max-width: 45%;
+    max-width: 95%;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+  .header {
+    width: 95%;
+    margin-top: 12%;
+  }
   .header-contents {
-    max-width: 65%;
+    max-width: 60%;
+  }
+  .header-contents p {
+    display: none;
+  }
+  .header-contents button {
+    padding: 2vw 4vw;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    width: 100%;
+    margin-top: 22%;
+  }
+  .header-contents {
+    max-width: 60%;
   }
   .header-contents p {
     display: none;
