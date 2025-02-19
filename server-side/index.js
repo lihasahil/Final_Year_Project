@@ -9,12 +9,12 @@ dotenv.config();
 const app = express();
 
 // network port and server
-const PORT = 9051;
+const PORT = 9050;
 
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://findmefrontend.vercel.app"],
+    origin: ["http://localhost:5173"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })

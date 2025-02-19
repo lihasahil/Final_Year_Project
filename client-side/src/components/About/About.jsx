@@ -31,7 +31,7 @@ const About = () => {
         </p>
       </div>
       <div className="box">
-        <h2>Out Technology</h2>
+        <h2>Our Technology</h2>
         <div className="cards">
           <HoverTextCard
             visibleImage="face.png"
