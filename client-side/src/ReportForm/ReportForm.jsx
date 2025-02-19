@@ -65,9 +65,9 @@ const ReportForm = () => {
         }}
         validationSchema={Yup.object({
           firstName: Yup.string()
-            .required("Firstname is required.")
+            .required("First name is required.")
             .trim()
-            .max(20, "Firstname must be atmost 20 characters."),
+            .max(20, "First name must be at most 20 characters."),
           lastName: Yup.string()
             .required("Lastname is required.")
             .trim()
