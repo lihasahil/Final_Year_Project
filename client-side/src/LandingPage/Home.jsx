@@ -14,7 +14,7 @@ const Home = () => {
         menuItems={[
           { id: "home", label: "Home", path: "/" },
           { id: "about", label: "About", path: "#about" },
-          { id: "about", label: "Mobile App", path: "#about" },
+          { id: "about", label: "Mobile App", path: "#mobile-app" },
           { id: "contact", label: "Contact", path: "#contact" },
         ]}
         defaultActive="home"
