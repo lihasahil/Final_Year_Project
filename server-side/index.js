@@ -15,7 +15,7 @@ const PYTHON_API_URL = "http://127.0.0.1:5000";
 app.use(express.json({ limit: "100mb" }));
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["final-year-project-frontend-gamma.vercel.app"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
