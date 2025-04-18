@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:9050",
+  baseURL: "final-year-project-psi-tan.vercel.app
+",
 });
 
 axiosInstance.interceptors.request.use(function (config) {
