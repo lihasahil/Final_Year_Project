@@ -6,17 +6,11 @@ const lostPersonSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  firstName: {
+  name: {
     type: String,
     required: true,
     trim: true,
-    maxlength: 20,
-  },
-  lastName: {
-    type: String,
-    required: true,
-    trim: true,
-    maxlength: 20,
+    maxlength: 50,
   },
   height: {
     type: String,

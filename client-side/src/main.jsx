@@ -8,6 +8,8 @@ import Register from "./Register/Register.jsx";
 import MainHome from "./HomePage/MainHome.jsx";
 import About from "./components/About/About.jsx";
 import ReportForm from "./ReportForm/ReportForm.jsx";
+import LostPersonDetail from "./components/LostPersonCard/LostPersonDetails.jsx";
+import FindPerson from "./ML_call/ML.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  { path: "/lostPerson-detail/:id", element: <LostPersonDetail /> },
   {
     path: "/about",
     element: <About />,
@@ -33,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/report",
     element: <ReportForm />,
+  },
+  {
+    path: "/find",
+    element: <FindPerson />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

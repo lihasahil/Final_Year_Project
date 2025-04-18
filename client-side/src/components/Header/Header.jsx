@@ -2,26 +2,35 @@ import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 
-const Header = () => {
+const Header = ({
+  title = "FindMe",
+  text,
+  showButton = true,
+  buttonText = "Sign Up",
+  buttonPath = "/login",
+  onButtonClick, // Custom onClick function
+}) => {
   const navigate = useNavigate();
+
+  // Default button action if no custom function is provided
+  const handleClick = () => {
+    if (onButtonClick) {
+      onButtonClick(); // Call the custom function
+    } else {
+      navigate(buttonPath); // Default navigation
+    }
+  };
+
   return (
     <div className="header">
       <div className="header-contents">
-        <h2 className="title-design">FindMe</h2>
-        <p>
-          &quot;Reuniting families with advanced face recognition and gait
-          analysis technology, bringing missing loved ones home swiftly and
-          accurately. Join us in our mission to reunite families. Together, we
-          can harness the power of technology to bring missing loved ones
-          home.&quot;
-        </p>
-        <button
-          onClick={() => {
-            navigate("/login");
-          }}
-        >
-          Sign Up
-        </button>
+        <h2 className="title-design">{title}</h2>
+        {text && <p>{text}</p>}
+        {showButton && (
+          <button onClick={handleClick} aria-label={buttonText}>
+            {buttonText}
+          </button>
+        )}
       </div>
     </div>
   );

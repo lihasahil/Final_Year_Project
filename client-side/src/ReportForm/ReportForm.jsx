@@ -55,8 +55,7 @@ const ReportForm = () => {
     >
       <Formik
         initialValues={{
-          firstName: "",
-          lastName: "",
+          name: "",
           height: "",
           weight: "",
           contact: "",
@@ -64,14 +63,10 @@ const ReportForm = () => {
           description: "",
         }}
         validationSchema={Yup.object({
-          firstName: Yup.string()
-            .required("First name is required.")
+          name: Yup.string()
+            .required("Name is required.")
             .trim()
-            .max(20, "First name must be at most 20 characters."),
-          lastName: Yup.string()
-            .required("Lastname is required.")
-            .trim()
-            .max(20, "Lastname must be atmost 20 characters."),
+            .max(50, "Name must be at most 50 characters."),
           height: Yup.string().required("Height is required.").trim(),
           weight: Yup.string().required("Height is required.").trim(),
           contact: Yup.string().required("Contact is required.").trim(),
@@ -148,42 +143,15 @@ const ReportForm = () => {
                   }}
                 />
               </FormControl>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  alignContent: "center",
-                }}
-              >
-                <FormControl fullWidth>
-                  <TextField
-                    sx={{
-                      marginRight: "10%",
-                    }}
-                    label="Firstname"
-                    {...formik.getFieldProps("firstName")}
-                  />
 
-                  {formik.touched.firstName && formik.errors.firstName ? (
-                    <FormHelperText error>
-                      {formik.errors.firstName}
-                    </FormHelperText>
-                  ) : null}
-                </FormControl>
-                <FormControl fullWidth>
-                  <TextField
-                    label="Lastname"
-                    {...formik.getFieldProps("lastName")}
-                  />
+              <FormControl fullWidth>
+                <TextField label="Name" {...formik.getFieldProps("name")} />
 
-                  {formik.touched.lastName && formik.errors.lastName ? (
-                    <FormHelperText error>
-                      {formik.errors.lastName}
-                    </FormHelperText>
-                  ) : null}
-                </FormControl>
-              </Box>
+                {formik.touched.name && formik.errors.name ? (
+                  <FormHelperText error>{formik.errors.name}</FormHelperText>
+                ) : null}
+              </FormControl>
+
               <Box
                 sx={{
                   display: "flex",

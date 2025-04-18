@@ -14,12 +14,22 @@ const Home = () => {
         menuItems={[
           { id: "home", label: "Home", path: "/" },
           { id: "about", label: "About", path: "#about" },
-          { id: "about", label: "Mobile App", path: "#mobile-app" },
+          { id: "mobile-app", label: "Mobile App", path: "#mobile-app" },
           { id: "contact", label: "Contact", path: "#contact" },
         ]}
         defaultActive="home"
       />
-      <Header />
+      <Header
+        text='"Reuniting families with advanced face recognition and gait
+          analysis technology, bringing missing loved ones home swiftly and
+          accurately. Join us in our mission to reunite families. Together, we
+          can harness the power of technology to bring missing loved ones
+          home."'
+        showButton={true}
+        buttonText="Get Started"
+        buttonPath="/login"
+      />
+
       <About />
       <AppDownload />
       <Footer />
