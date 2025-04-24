@@ -1,0 +1,11 @@
+{
+    "name": "asmita",
+    "age": 23,
+    "gender": "F",
+    "address": "tulsipur,dang",
+    "email": "asmita@gmail.com",
+    "location": "hcoe",
+    "features": [
+        "features/asmita\\asmita_features.npy"
+    ]
+}

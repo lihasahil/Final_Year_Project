@@ -1,0 +1,11 @@
+{
+    "name": "prajana",
+    "age": 23,
+    "gender": "F",
+    "address": "tinkune",
+    "email": "prajana@gmail.com",
+    "location": "himalaya college",
+    "features": [
+        "features/prajana\\prajana_features.npy"
+    ]
+}
