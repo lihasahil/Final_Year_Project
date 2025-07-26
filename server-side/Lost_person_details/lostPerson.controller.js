@@ -47,6 +47,8 @@ router.get("/lostPerson/list", isValidUser, async (req, res) => {
     .status(200)
     .send({ message: "success", lostPersonList: lostPerson });
 });
+
+
 //get lostPerson details by id
 router.get("/lostPerson/details/:id", isValidUser, async (req, res) => {
   try {
