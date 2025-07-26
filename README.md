@@ -34,6 +34,7 @@ Used python for creating model and Fast API to integrate python model with MERN 
 ![UserFetch](./images/report.png)
 ---
 **Model Output:**
+
 ![UserFetch](./images/face.png)
 ![UserFetch](./images/gait.png)
 
